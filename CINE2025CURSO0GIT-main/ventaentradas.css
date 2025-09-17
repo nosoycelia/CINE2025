@@ -91,16 +91,3 @@ a{
     cursor: pointer;
     
 }
-.cartel {
-    background-color: lightblue;
-    text-align: center;  
-    padding: 2px;        
-}
-
-.cartel img {
-    width: 200px;      
-    height: auto;        
-    display: block;  
-    margin: 0 auto;      
-}
-

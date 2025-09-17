@@ -1,6 +1,6 @@
-var aPelis=new Array("Que bello es vivir","Solo en casa","Cuento de Navidad","Gladiator 2");
-var aLoc= new Array(50,120,60,120);
-var aSalas=new Array("1","2","3","2");
+var aPelis=new Array("Que bello es vivir","Solo en casa","Cuento de Navidad");
+var aLoc= new Array(50,120,60);
+var aSalas=new Array("1","2","3");
 //Almacenamos la localidades vendidas por sala: aVendidas1, aVendidas2 y aVendidas3
 //y las vendidas en la pelicula seleccionada en el array vendidas
 var aVendidas1= new Array();    
@@ -24,16 +24,13 @@ function seleccionarPeli(){
     butacaSel=0;
     switch(indice){
         case "1":
-            vendidas = aVendidas1.slice(0, aVendidas1.length);
+            vendidas=aVendidas1.slice(0,aVendidas1.length);
             break;
         case "2":
-            vendidas = aVendidas2.slice(0, aVendidas2.length);
+            vendidas=aVendidas2.slice(0,aVendidas2.length);
             break;
         case "3":
-            vendidas = aVendidas3.slice(0, aVendidas3.length);
-            break;
-        case "4": // Gladiator 2 -> misma Sala 2 que "Solo en casa"
-            vendidas = aVendidas2.slice(0, aVendidas2.length);
+            vendidas=aVendidas3.slice(0,aVendidas3.length);
             break;
     }
     pintarButacas();    
@@ -76,13 +73,11 @@ function seleccionar(){
         butacaSel++;
     }
     else{
-        index = vendidas.indexOf(butacaId);
-        vendidas.splice(index, 1);
-
-        indAs = asientos.indexOf(butacaId);
-        if (indAs !== -1) asientos.splice(indAs, 1); // <-- usar indAs
-
-        this.event.target.className = "libre";
+        index=vendidas.indexOf(butacaId);
+        vendidas.splice(index,1);
+        indAs=asientos.indexOf(butacaId);
+        asientos.splice(index,1);
+        this.event.target.className="libre";
         butacaSel--;
     }
 }
