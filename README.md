@@ -7,7 +7,7 @@ El objetivo era tener la aplicación accesible desde el navegador en `http://loc
 
 ## 🚀 Pasos realizados
 
-### 1. Arrancar contenedor de Nginx
+### 1️⃣ Arrancar contenedor de Nginx
 Se utilizó la imagen oficial de Nginx para levantar un contenedor:
 
 docker run -d --name focused_napier -p 8080:80 nginx
@@ -57,9 +57,13 @@ se muestra correctamente nuestra aplicación CINE25 servida desde el contenedor 
 
 ### 📝 Notas
 
-Es importante que el archivo de entrada principal se llame index.html para que Nginx lo muestre por defecto.
+- Es importante que el archivo de entrada principal se llame index.html para que Nginx lo muestre por defecto.
 
-Si se cambia la aplicación, hay que repetir el proceso de copiar los archivos y recargar Nginx.
+- Si se cambia la aplicación, hay que repetir el proceso de copiar los archivos y recargar Nginx.
 
-También podría usarse un volumen en lugar de docker cp para trabajar de forma más ágil en local.
-
+- También podría usarse un volumen en lugar de docker cp para trabajar de forma más ágil en local.
+Ejemplo:
+    docker run -d -p 8080:80 --name cine25 `
+    -v "C:\Users\cole\Desktop\DAM2\SGE\UD1\CINE25\CINE2025CURSO0GIT-main":/usr/share/nginx/html `
+    nginx
+Con eso, todo lo que se cambie en la carpeta en Windows se refleja automáticamente dentro del contenedor.
