@@ -1,4 +1,4 @@
-# 🎬 Despliegue de la aplicación **CINE25** con Nginx en Docker
+# 🎬 Despliegue de la aplicación **CINE2025** con Nginx en Docker
 
 En esta práctica se ha desplegado la aplicación **CINE2025** dentro de un contenedor **Nginx** usando **Docker**.  
 El objetivo era tener la aplicación accesible desde el navegador en `http://localhost:8080`.
