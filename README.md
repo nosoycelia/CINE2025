@@ -30,16 +30,19 @@ docker exec -it focused_napier sh -c "rm -rf /usr/share/nginx/html/*"
 
 <img width="886" height="183" alt="image" src="https://github.com/user-attachments/assets/fe51c495-a475-4ac8-ba77-6116c7e04288" />
 
+
 🔹 Copiar la aplicación dentro del contenedor
 docker cp "C:\Users\cole\Desktop\DAM2\SGE\UD1\CINE25\CINE2025CURSO0GIT-main\." focused_napier:/usr/share/nginx/html/
 
 <img width="886" height="197" alt="image" src="https://github.com/user-attachments/assets/51a124d3-564a-4b3b-bec6-35806232a615" />
+
 
 3️⃣ Recargar Nginx
 
 Para aplicar los cambios recargamos la configuración de Nginx:
 
 docker exec -it focused_napier nginx -s reload
+
 
 4️⃣ Resultado final 
 
@@ -49,7 +52,8 @@ Al acceder a:
 
 se muestra correctamente nuestra aplicación CINE25 servida desde el contenedor Nginx:
 
-<img width="780" height="446" alt="image" src="https://github.com/user-attachments/assets/26c527eb-30ed-49a1-a1bf-81ee1bf476f4" />
+<img width="886" height="507" alt="image" src="https://github.com/user-attachments/assets/48ac3dc8-0600-4a39-b899-2eeaa8429d2d" />
+
 
 📝 Notas
 
@@ -58,3 +62,4 @@ Es importante que el archivo de entrada principal se llame index.html para que N
 Si se cambia la aplicación, hay que repetir el proceso de copiar los archivos y recargar Nginx.
 
 También podría usarse un volumen en lugar de docker cp para trabajar de forma más ágil en local.
+
