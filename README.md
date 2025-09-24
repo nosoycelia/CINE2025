@@ -9,13 +9,13 @@ El objetivo era tener la aplicación accesible desde el navegador en `http://loc
 
 ### 1. Arrancar contenedor de Nginx
 Se utilizó la imagen oficial de Nginx para levantar un contenedor:
-```bash
+
 docker run -d --name focused_napier -p 8080:80 nginx
 
 Esto permitió acceder a la página por defecto de Nginx.
 
 
-2️⃣ Copiar la aplicación al contenedor
+### 2️⃣ Copiar la aplicación al contenedor
 
 La aplicación se encontraba en la ruta local:
 
@@ -37,14 +37,14 @@ docker cp "C:\Users\cole\Desktop\DAM2\SGE\UD1\CINE25\CINE2025CURSO0GIT-main\." f
 <img width="886" height="197" alt="image" src="https://github.com/user-attachments/assets/51a124d3-564a-4b3b-bec6-35806232a615" />
 
 
-3️⃣ Recargar Nginx
+### 3️⃣ Recargar Nginx
 
 Para aplicar los cambios recargamos la configuración de Nginx:
 
 docker exec -it focused_napier nginx -s reload
 
 
-4️⃣ Resultado final 
+### 4️⃣ Resultado final 
 
 Al acceder a:
 
@@ -55,7 +55,7 @@ se muestra correctamente nuestra aplicación CINE25 servida desde el contenedor 
 <img width="886" height="507" alt="image" src="https://github.com/user-attachments/assets/48ac3dc8-0600-4a39-b899-2eeaa8429d2d" />
 
 
-📝 Notas
+### 📝 Notas
 
 Es importante que el archivo de entrada principal se llame index.html para que Nginx lo muestre por defecto.
 
