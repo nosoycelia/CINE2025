@@ -26,12 +26,14 @@ Inicialmente cometí un error porque el archivo principal se llamaba ventaentrad
 Para que Nginx lo sirviera correctamente lo renombré a index.html.
 
 🔹 Eliminar archivos por defecto de Nginx
+
 docker exec -it focused_napier sh -c "rm -rf /usr/share/nginx/html/*"
 
 <img width="886" height="183" alt="image" src="https://github.com/user-attachments/assets/fe51c495-a475-4ac8-ba77-6116c7e04288" />
 
 
 🔹 Copiar la aplicación dentro del contenedor
+
 docker cp "C:\Users\cole\Desktop\DAM2\SGE\UD1\CINE25\CINE2025CURSO0GIT-main\." focused_napier:/usr/share/nginx/html/
 
 <img width="886" height="197" alt="image" src="https://github.com/user-attachments/assets/51a124d3-564a-4b3b-bec6-35806232a615" />
